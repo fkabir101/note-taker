@@ -15,3 +15,5 @@ INSERT INTO notes(title, note)
 VALUES("Second Note", "Finish Homework");
 INSERT INTO notes(title, note)
 VALUES("Third Note", "Submit Homework");
+INSERT INTO notes(title, note)
+VALUES("A Long Note", "A really LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONG note");
