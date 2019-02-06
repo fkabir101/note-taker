@@ -8,7 +8,7 @@ $(document).ready(function(){
       const listItem = $("<li class='list-group-item'>");
 
       listItem.append(`<h4>${index.id}. ${index.title}</h4>`);
-      listItem.append(`<p>${index.note.substring(0, 35)}...</p>`);
+      listItem.append(`<p>${index.note.substring(0, 15)}...</p>`);
       listItem.append(`<button type="button" class="btn btn-outline-danger delete">Delete</button>`);
 
       listItem.attr("id", index.id);
