@@ -3,7 +3,7 @@ const db = require("../db/connection");
 module.exports = {
   // function to get all notes
   getAllNotes: function(req, res){
-    db.query("SELECT * FROM note_db.notes", function(err, data){
+    db.query("SELECT * FROM notes", function(err, data){
       if(err){
         console.log(err);
         throw err;
@@ -13,7 +13,7 @@ module.exports = {
   },
   // function to get single note
   getSingleNote: function(req, res){
-    db.query("SELECT * FROM note_db.notes WHERE id=?",[req.params.id], function(err, data){
+    db.query("SELECT * FROM notes WHERE id=?",[req.params.id], function(err, data){
       if(err){
         console.log(err);
         throw err;
@@ -35,7 +35,7 @@ module.exports = {
   // function to delete
   deleteNote: function(req, res){
     console.log(req.body);
-    db.query("DELETE FROM note_db.notes WHERE id=?",[req.params.id], function(err, data){
+    db.query("DELETE FROM notes WHERE id=?",[req.params.id], function(err, data){
       if(err){
         console.log(err);
         throw err;
