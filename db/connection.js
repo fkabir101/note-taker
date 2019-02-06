@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 //require("dotenv").config();
 
-let connection;
+//let connection;
 var connection;
 
 // Sets up db to connect locally or on JAWSDB if deployed
