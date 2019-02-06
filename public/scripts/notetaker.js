@@ -18,7 +18,7 @@ $(document).ready(function(){
   })
 });
 
-// function to run to display full note
+// function to run to display single note
 $(".list-group").on("click",".list-group-item", function(event){
   event.preventDefault();
   id = ($(this).attr('id'));
@@ -35,6 +35,8 @@ $(".list-group").on("click",".list-group-item", function(event){
     $("#display").html(noteDiv);
   });
 });
+
+// used to delete note
 $(".list-group").on("click",".delete", function(event){
   event.preventDefault();
   id = ($(this).parent().attr('id'));

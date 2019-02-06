@@ -1,3 +1,4 @@
+// create form to add note
 $("#add").on("click", function(event){
   event.preventDefault();
   const form = $("<form>");
@@ -21,6 +22,7 @@ $("#add").on("click", function(event){
   $("#display").html(form);
 });
 
+// add note to database
 $("#display").on("click","#add", function(event){
   event.preventDefault();
   const noteData = {
