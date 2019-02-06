@@ -1,3 +1,4 @@
+// get notes on load
 $(document).ready(function(){
   $.ajax({
     url: "/api",
@@ -16,6 +17,8 @@ $(document).ready(function(){
     })
   })
 });
+
+// function to run to display full note
 $(".list-group").on("click",".list-group-item", function(event){
   event.preventDefault();
   id = ($(this).attr('id'));
@@ -32,3 +35,16 @@ $(".list-group").on("click",".list-group-item", function(event){
     $("#display").html(noteDiv);
   });
 });
+$(".list-group").on("click",".delete", function(event){
+  event.preventDefault();
+  id = ($(this).parent().attr('id'));
+  $.ajax({
+    url: `/api/${id}`,
+    method: "DELETE",
+  }).then(function(data){
+    if(data){
+      location.reload();
+    }
+  });
+});
+
